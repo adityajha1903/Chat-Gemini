@@ -12,6 +12,11 @@ Chat Gemini
 </div>
 
 <h2 align="left">
+<sub>
+<img  src="https://i.ibb.co/y8SzB6z/about-us-icon-34422.png"
+      height="30"
+      width="30">
+</sub>
 About
 </h2>
 
