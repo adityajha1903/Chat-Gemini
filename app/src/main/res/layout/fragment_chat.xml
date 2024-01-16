@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.adiandrodev.chatgemini.viewmodels.ChatFragmentViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.ChatFragment"
+        android:background="@color/color2">
+
+        <ImageButton
+            android:id="@+id/clear_chat"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="top|end"
+            android:layout_margin="20dp"
+            android:background="@drawable/btn_bg"
+            android:contentDescription="@string/clear_chat"
+            android:elevation="5dp"
+            android:src="@drawable/baseline_delete_24"
+            tools:ignore="ImageContrastCheck" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/chats_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/cv"
+                tools:itemCount="2"
+                tools:listitem="@layout/chat_recycler_item"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                app:cardElevation="5dp"
+                app:cardCornerRadius="25dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:cardBackgroundColor="@color/grey"
+                app:layout_constraintEnd_toStartOf="@id/send_message_btn"
+                android:layout_marginStart="4dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginEnd="2dp">
+
+                <EditText
+                    android:id="@+id/message_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="28dp"
+                    android:autofillHints=""
+                    android:background="@android:color/transparent"
+                    android:hint="@string/message"
+                    android:imeOptions="actionSend"
+                    android:inputType="text"
+                    android:text="@={viewModel.editTextPrompt}"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/mild_white"
+                    tools:ignore="VisualLintTextFieldSize,TextContrastCheck" />
+
+            </androidx.cardview.widget.CardView>
+
+            <ImageButton
+                android:id="@+id/send_message_btn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/btn_bg"
+                android:contentDescription="@string/send_message"
+                android:elevation="5dp"
+                android:src="@drawable/baseline_send_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/cv"
+                tools:ignore="ImageContrastCheck" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</layout>

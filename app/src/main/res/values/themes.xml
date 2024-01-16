@@ -1,0 +1,31 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ChatGemini" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/color3</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="Theme.ChatGemini" parent="Base.Theme.ChatGemini" />
+
+    <style name="ThemeTabLayout" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/white</item>
+    </style>
+
+    <style name="AppSplashTheme" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/color3</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_screen_icon</item>
+        <item name="windowSplashScreenAnimationDuration">500</item>
+        <item name="postSplashScreenTheme">@style/Base.Theme.ChatGemini</item>
+
+        <!-- Status bar and Nav bar configs -->
+        <item name="android:statusBarColor" >@color/color3</item>
+        <item name="android:navigationBarColor">@color/color3</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="ImageStyle">
+        <item name="cornerSize">15%</item>
+    </style>
+</resources>

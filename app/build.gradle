@@ -1,0 +1,75 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+}
+
+android {
+    namespace 'com.adiandrodev.chatgemini'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.adiandrodev.chatgemini"
+        minSdk 26
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        Properties properties = new Properties()
+        properties.load(project.rootProject.file("local.properties").newDataInputStream())
+        buildConfigField "String","API_KEY","\"${properties.getProperty("API_KEY")}\""
+        buildConfigField "String","PLAY_STORE_SHARE_LINK","\"https://play.google.com/store/apps/details?id=\""
+        buildConfigField "String","DEVELOPER_EMAIL","\"adi.androdev.help@gmail.com\""
+        buildConfigField "String","TWITTER_BASE_URL","\"https://www.twitter.com/\""
+        buildConfigField "String","DEVELOPER_TWITTER","\"adityajha_1903\""
+        buildConfigField "String","GEMINI_URL","\"https://deepmind.google/technologies/gemini/\""
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        buildConfig = true
+        viewBinding = true
+        dataBinding = true
+    }
+}
+
+dependencies {
+
+    // Splash Screen
+    implementation 'androidx.core:core-splashscreen:1.0.1'
+    // ViewModel
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0'
+    // LiveData
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.7.0'
+    // Saved state module for ViewModel
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0'
+    // Annotation processor
+    implementation 'androidx.lifecycle:lifecycle-common-java8:2.7.0'
+    // Google AI client SDK for Android
+    implementation 'com.google.ai.client.generativeai:generativeai:0.1.2'
+    // Custom chrome tab
+    implementation 'androidx.browser:browser:1.7.0'
+
+    implementation 'androidx.core:core-ktx:1.12.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.android.play:review-ktx:2.0.1'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.imageview.ShapeableImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/imageView"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:background="#939393"
+    android:layout_gravity="center_vertical"
+    android:src="@drawable/baseline_image_not_supported_24"
+    app:shapeAppearance="@style/ImageStyle"
+    android:layout_margin="4dp"
+    android:scaleType="centerCrop"
+    android:clickable="true"
+    android:focusable="true"
+    android:contentDescription="@string/image"/>
