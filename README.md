@@ -37,3 +37,6 @@ Screenshots
 <img src="https://raw.githubusercontent.com/adityajha1903/Chat-Gemini/master/images/3.png" width=20% alt="ss3">
 <img src="https://raw.githubusercontent.com/adityajha1903/Chat-Gemini/master/images/4.png" width=20% alt="ss4">
 </div>
+
+## Download APK
+  [Chat Gemini debug.apk](https://drive.google.com/file/d/11fQ2iAv3dVywT8eloB6R9PsWZ5DwKjBB/view?usp=sharing)
