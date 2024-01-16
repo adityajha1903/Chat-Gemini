@@ -1,17 +1,17 @@
-<h2 align="left">
+<h1 align="left">
 <sub>
 <img  src="https://raw.githubusercontent.com/adityajha1903/Chat-Gemini/master/images/play_store_512.png"
       height="30"
       width="30">
 </sub>
 Chat Gemini
-</h2>
+</h1>
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/adityajha1903/Chat-Gemini/master/images/Feature%20graphic.png" width="auto" height="auto" alt="LibreTube">
 </div>
 
-</sub>
+<h2 align="left">
 About
 </h2>
 
