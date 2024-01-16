@@ -10,6 +10,12 @@ Chat Gemini
 <div align="center">
   <img src="https://raw.githubusercontent.com/adityajha1903/Chat-Gemini/master/images/Feature%20graphic.png" width="auto" height="auto" alt="LibreTube">
 
+</sub>
+About
+</h2>
+
+Chat Gemini is a conversational AI model that uses Google's Gemini API for getting user-friendly, comprehensive and informative responses to a wide range of queries and engage in meaningful conversations.
+
 <h2 align="left">
 <sub>
 <img  src="https://www.svgrepo.com/show/60715/smartphone.svg"
